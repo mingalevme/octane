@@ -14,7 +14,7 @@ trait FindsFrankenPhpBinary
         if (! is_null($frankenPhpBinary = config('octane.frankenphp.binary'))) {
             if (! file_exists($frankenPhpBinary)) {
                 throw new \RuntimeException(
-                    'FrankenPHP binary is not found at path: ' . config('octane.frankenphp.binary')
+                    'FrankenPHP binary is not found at path: '.config('octane.frankenphp.binary')
                 );
             }
             return $frankenPhpBinary;

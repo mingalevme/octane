@@ -15,7 +15,7 @@ trait FindsRoadRunnerBinary
         if (! is_null($roadRunnerBinary = config('octane.roadrunner.binary'))) {
             if (! file_exists($roadRunnerBinary)) {
                 throw new \RuntimeException(
-                    'RoadRunner binary is not found at path: ' . config('octane.roadrunner.binary')
+                    'RoadRunner binary is not found at path: '.config('octane.roadrunner.binary')
                 );
             }
             return $roadRunnerBinary;
