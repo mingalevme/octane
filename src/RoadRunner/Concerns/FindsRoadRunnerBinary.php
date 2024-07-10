@@ -12,6 +12,15 @@ trait FindsRoadRunnerBinary
      */
     protected function findRoadRunnerBinary(): ?string
     {
+        if (! is_null($roadRunnerBinary = config('octane.roadrunner.binary'))) {
+            if (! file_exists($roadRunnerBinary)) {
+                throw new \RuntimeException(
+                    'RoadRunner binary is not found at path: ' . config('octane.roadrunner.binary')
+                );
+            }
+            return $roadRunnerBinary;
+        }
+
         if (file_exists(base_path('rr'))) {
             return base_path('rr');
         }
