@@ -18,6 +18,7 @@ trait FindsRoadRunnerBinary
                     'RoadRunner binary is not found at path: '.config('octane.roadrunner.binary')
                 );
             }
+
             return $roadRunnerBinary;
         }
 

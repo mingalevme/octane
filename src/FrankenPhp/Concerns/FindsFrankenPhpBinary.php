@@ -17,6 +17,7 @@ trait FindsFrankenPhpBinary
                     'FrankenPHP binary is not found at path: '.config('octane.frankenphp.binary')
                 );
             }
+
             return $frankenPhpBinary;
         }
 
